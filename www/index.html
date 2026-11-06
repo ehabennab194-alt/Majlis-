@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827"><title>مجلس | Majlis</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0b1220;--panel:#111c2e;--panel2:#17243a;--line:#263650;--text:#eef4ff;--muted:#91a2bb;--accent:#7c6cff;--green:#35c99a;--danger:#ef6678}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% 0%,#1b2850 0%,var(--bg) 48%);color:var(--text);font-family:Cairo,Arial,sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer}.hidden{display:none!important}
+.auth-shell{min-height:100vh;display:grid;place-items:center;padding:22px}.auth-card{width:min(100%,430px);background:rgba(17,28,46,.96);border:1px solid var(--line);border-radius:25px;padding:32px;box-shadow:0 25px 80px #0007;text-align:center}.brand-mark,.small-mark{display:grid;place-items:center;background:linear-gradient(135deg,#8b7cff,#5745d6);color:white;font-weight:800;border-radius:17px}.brand-mark{width:62px;height:62px;font-size:30px;margin:0 auto 12px}.eyebrow{color:#a99fff;font-size:13px;margin:0}.auth-card h1{margin:2px 0;font-size:34px}.auth-card h1 span{font-size:17px;color:#a99fff;direction:ltr;display:inline-block}.muted{color:var(--muted);font-size:13px}.auth-form{display:grid;gap:13px;text-align:right;margin-top:22px}.auth-form label,.modal-card label{display:grid;gap:7px;font-size:13px;color:#c8d4e7}.auth-form input,.modal-card input,.search-input{width:100%;background:#0b1526;border:1px solid #30415e;color:white;border-radius:12px;padding:12px 14px;outline:none}.auth-form input:focus,.modal-card input:focus,.search-input:focus{border-color:var(--accent)}.primary{border:0;background:linear-gradient(135deg,var(--accent),#5745d6);color:#fff;border-radius:12px;padding:12px;font-weight:700}.text-button,.auth-switch button{border:0;background:none;color:#a99fff}.auth-switch{margin-top:18px;font-size:13px;color:var(--muted)}.message{min-height:20px;font-size:13px;color:#ffbd75}.app{height:100vh;display:grid;grid-template-columns:285px 1fr;padding:16px;gap:14px}.sidebar,.chat-panel{background:rgba(17,28,46,.97);border:1px solid var(--line);border-radius:20px;min-height:0}.sidebar{padding:17px;display:flex;flex-direction:column}.side-brand{display:flex;align-items:center;gap:11px;margin-bottom:18px}.small-mark{width:42px;height:42px}.side-brand b{display:block}.side-brand small{display:block;color:var(--muted);font-size:11px;direction:ltr;text-align:right}.side-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}.side-actions button{border:1px solid #5147a0;background:#28234f;color:#d1cbff;border-radius:11px;padding:10px 5px;font-size:12px}.side-heading{font-size:12px;color:var(--muted);margin:4px 0 9px}.room-list{overflow:auto;flex:1}.room-item{width:100%;display:flex;align-items:center;gap:9px;text-align:right;padding:9px;border:0;border-radius:11px;background:transparent;color:#dce6f7;margin-bottom:4px}.room-item:hover,.room-item.active{background:#202d46}.room-symbol{width:33px;height:33px;display:grid;place-items:center;background:#283957;border-radius:10px;color:#b7adff}.profile{border-top:1px solid var(--line);padding-top:13px;display:flex;align-items:center;gap:9px}.avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#5449a9;flex:none}.profile-info{min-width:0;flex:1}.profile-info b,.profile-info small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.profile-info small{font-size:10px;color:var(--muted)}.icon-button{border:0;background:transparent;color:#aab9cf;font-size:18px}.chat-panel{display:flex;flex-direction:column;overflow:hidden}.chat-header{padding:17px 23px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.chat-header h2{font-size:18px;margin:0}.chat-header p{font-size:11px;color:var(--muted);margin:3px 0 0}.header-actions{display:flex;align-items:center;gap:8px}.header-actions button{background:#202d46;border:1px solid #334765;color:#dbe5f5;border-radius:10px;padding:8px 10px;font-size:12px}.admin-label{font-size:10px;color:#a99fff}.welcome{margin:auto;text-align:center;padding:25px;max-width:420px}.welcome-icon{font-size:40px;color:#9b8eff}.welcome p{color:var(--muted);font-size:14px}.messages{flex:1;overflow:auto;padding:22px;display:flex;flex-direction:column;gap:12px}.message-row{max-width:min(78%,650px);align-self:flex-start;background:#1c2a42;border:1px solid #2b3c58;padding:10px 13px;border-radius:14px 14px 14px 4px}.message-row.mine{align-self:flex-end;background:#403887;border-color:#5c50b1;border-radius:14px 14px 4px 14px}.message-meta{font-size:10px;color:#b5c1d4;margin-bottom:4px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.message-text{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}.delete-msg{background:transparent;border:0;color:#ff9eaa;font-size:11px;padding:0}.composer{display:flex;gap:9px;padding:14px 18px;border-top:1px solid var(--line)}.media-button{width:42px;min-width:42px;border:0;border-radius:50%;background:#2a3942;color:#d8e4e8;font-size:19px}.voice-button{width:44px;min-width:44px;border:0;border-radius:50%;background:#263b42;color:#fff;font-size:20px}.voice-button.recording{background:#c83248;animation:pulseVoice 1s infinite}.record-status{font-size:11px;color:#ff7888;white-space:nowrap}@keyframes pulseVoice{50%{opacity:.55}}.shared-image{display:block;max-width:min(320px,70vw);max-height:360px;border-radius:9px;object-fit:contain;margin-top:5px}.location-card{display:flex;align-items:center;gap:10px;background:#173b36;border-radius:10px;padding:12px;color:#e7fff8;text-decoration:none;min-width:210px}.location-card strong{display:block}.location-card small{color:#b7d9d0}.voice-player{display:block;width:min(280px,65vw);height:38px;filter:invert(.88) hue-rotate(100deg)}.composer input{flex:1;min-width:0;background:#0b1526;border:1px solid #30415e;color:white;border-radius:12px;padding:12px}.send-button{width:47px;border:0;border-radius:12px;background:var(--accent);color:white;font-size:19px}.modal{position:fixed;inset:0;background:#030712c9;display:grid;place-items:center;padding:18px;z-index:5}.modal-card{position:relative;width:min(100%,430px);max-height:85vh;overflow:auto;background:var(--panel);border:1px solid var(--line);padding:25px;border-radius:20px;display:grid;gap:13px}.modal-card h2{margin:0;font-size:20px}.close{position:absolute;left:15px;top:9px;background:none;border:0;color:white;font-size:25px}.search-result,.member-row{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--line);border-radius:12px;background:#142138}.search-result .person-info,.member-row .person-info{flex:1;min-width:0}.person-info b,.person-info small{display:block;overflow-wrap:anywhere}.person-info small{font-size:11px;color:var(--muted)}.small-btn{border:1px solid #5147a0;background:#28234f;color:#d4ceff;border-radius:9px;padding:7px 10px;font-size:11px}.danger-btn{border:1px solid #7c3445;background:#3b202e;color:#ffadb8;border-radius:9px;padding:7px 9px;font-size:11px}.list-stack{display:grid;gap:8px}.hint{color:var(--muted);font-size:11px;line-height:1.8}.empty-result{font-size:13px;color:var(--muted);text-align:center;padding:16px}
+@media(max-width:700px){.app{height:100dvh;padding:7px;gap:7px;grid-template-columns:105px 1fr}.sidebar{padding:9px 6px;border-radius:15px}.side-brand{justify-content:center;margin-bottom:12px}.side-brand>div:last-child{display:none}.small-mark{width:38px;height:38px}.side-actions{grid-template-columns:1fr;gap:5px;margin-bottom:12px}.side-actions button{font-size:10px;padding:8px 2px}.side-heading{font-size:10px;text-align:center}.room-item{justify-content:center;padding:7px}.room-name{display:none}.room-symbol{width:37px;height:37px}.profile{justify-content:center;flex-wrap:wrap}.profile-info{display:none}.chat-panel{border-radius:15px}.chat-header{padding:13px 10px}.chat-header h2{font-size:14px}.chat-header p{font-size:9px}.header-actions{gap:4px}.header-actions button{font-size:10px;padding:7px 5px}.admin-label{display:none}.messages{padding:11px}.message-row{max-width:92%}.composer{padding:9px}.auth-card{padding:25px 19px}}
+
+.toast-wrap{position:fixed;left:18px;bottom:18px;z-index:20;display:grid;gap:8px;pointer-events:none}
+.toast{pointer-events:auto;min-width:min(340px,calc(100vw - 36px));max-width:420px;background:#182741;border:1px solid #52658a;border-right:4px solid #7c6cff;color:#eef4ff;border-radius:14px;padding:12px 14px;box-shadow:0 12px 40px #0009;animation:toastIn .2s ease}
+.toast b{display:block;font-size:13px;margin-bottom:3px}.toast p{margin:0;color:#c6d3e7;font-size:12px;overflow-wrap:anywhere}
+.sender-link{border:0;padding:0;background:none;color:#d4ccff;text-decoration:underline;text-underline-offset:3px;font-weight:700;font-size:inherit}
+.sender-link:hover{color:#fff}
+@keyframes toastIn{from{transform:translateY(8px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+
+/* WhatsApp-inspired conversation experience */
+:root{--wa-green:#00a884;--wa-green-dark:#005c4b;--wa-bg:#0b141a;--wa-panel:#111b21;--wa-header:#202c33;--wa-line:#26343d}
+body{background:#0b141a}
+.app{grid-template-columns:minmax(290px,370px) minmax(0,1fr);gap:0;padding:0;background:#111b21;border:1px solid #26343d}
+.sidebar{border:0;border-left:1px solid #26343d;border-radius:0;background:#111b21;padding:14px}
+.chat-panel{border:0;border-radius:0;background-color:#0b141a;background-image:radial-gradient(circle at 20% 20%,#17252b 0 1px,transparent 1.5px),radial-gradient(circle at 70% 60%,#17252b 0 1px,transparent 1.5px);background-size:28px 28px}
+.chat-header{background:#202c33;border:0;padding:12px 18px;min-height:68px}
+.chat-header h2{font-size:16px}.chat-header p{color:#aebac1}
+.header-actions button{background:#2a3942;border:0;color:#d1d7db;border-radius:20px}
+.side-actions button{background:#202c33;border:1px solid #33434d;color:#d9e4e8;border-radius:22px}
+.side-heading{font-size:13px;color:#8696a0}
+.room-item{border-radius:10px;padding:12px 9px;border-bottom:1px solid #202c33}
+.room-item:hover,.room-item.active{background:#202c33}
+.room-symbol{border-radius:50%;background:#263b42;color:#7bd8c0}
+.room-info{display:flex;flex-direction:column;min-width:0;gap:2px}
+.room-title{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.room-preview{font-size:11px;color:#91a2aa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;display:block}
+@media(max-width:700px){.room-info{flex:1}.room-title{font-size:14px}.room-preview{font-size:11px}}
+.profile{border-color:#26343d}
+.messages{padding:22px 5%;gap:8px}
+.message-row{background:#202c33;border:0;border-radius:9px 9px 9px 2px;padding:8px 11px;box-shadow:0 1px 1px #0003}
+.message-row.mine{background:#005c4b;border:0;border-radius:9px 9px 2px 9px}
+.message-meta{color:#aebac1;font-size:11px}
+.message-row.mine .message-meta{color:#b9d8d0}
+.sender-link{color:#80d9c2}
+.message-text{font-size:14px;line-height:1.65}
+.composer{background:#202c33;border:0;padding:12px 16px;gap:10px}
+.composer input{background:#2a3942;border:0;border-radius:24px;padding:13px 17px;color:#e9edef}
+.send-button{background:#00a884;border-radius:50%;width:44px;height:44px;flex:none}
+.back-chats{display:none;border:0;background:transparent;color:#e9edef;font-size:30px;line-height:1;padding:0 7px}
+.toast{border-right-color:#00a884}
+@media(max-width:700px){
+ .app{height:100dvh;padding:0;display:block;position:relative;overflow:hidden}
+ .sidebar{position:absolute;inset:0;width:100%;height:100%;z-index:2;padding:12px 10px;border:0;display:flex}
+ .side-brand{justify-content:flex-start;margin:0 0 14px;padding:5px 4px}
+ .side-brand>div:last-child{display:block}
+ .side-actions{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+ .side-actions button{font-size:12px;padding:10px 6px}
+ .side-heading{text-align:right}
+ .room-list{overflow:auto}
+ .room-item{justify-content:flex-start;padding:12px 9px;min-height:64px}
+ .room-name{display:block;font-size:14px}
+ .room-symbol{width:43px;height:43px;flex:none}
+ .profile{justify-content:flex-start;flex-wrap:nowrap}
+ .profile-info{display:block}
+ .chat-panel{position:absolute;inset:0;z-index:3;display:none;height:100%;width:100%}
+ .app.chat-open .chat-panel{display:flex}
+ .app.chat-open .sidebar{display:none}
+ .chat-header{padding:10px 8px;min-height:64px;justify-content:flex-start}
+ .back-chats{display:block}
+ .chat-heading{flex:1;min-width:0}
+ .chat-header h2{font-size:15px}
+ .header-actions button{font-size:10px;padding:7px 8px}
+ .messages{padding:14px 10px}
+ .message-row{max-width:88%}
+ .composer{padding:9px 10px}
+}
+
+</style>
+</head>
+<body>
+<main id="authView" class="auth-shell"><section class="auth-card">
+<div class="brand-mark">م</div><p class="eyebrow">مساحتك للتواصل</p><h1>مجلس <span>Majlis</span></h1><p class="muted">تواصل، شارك، وأنشئ مجلسك الخاص.</p>
+<form id="loginForm" class="auth-form"><label>البريد الإلكتروني<input id="loginEmail" type="email" required placeholder="name@example.com"></label><label>كلمة المرور<input id="loginPassword" type="password" required placeholder="••••••••"></label><button class="primary">تسجيل الدخول</button><button class="text-button" type="button" id="showForgot">نسيت كلمة المرور؟</button></form>
+<form id="signupForm" class="auth-form hidden"><label>الاسم الظاهر<input id="signupName" required maxlength="40"></label><label>البريد الإلكتروني<input id="signupEmail" type="email" required></label><label>كلمة المرور<input id="signupPassword" type="password" minlength="8" required></label><button class="primary">إنشاء حساب</button></form>
+<form id="forgotForm" class="auth-form hidden"><p class="muted">أدخل بريدك الإلكتروني لإرسال رابط إعادة التعيين.</p><label>البريد الإلكتروني<input id="forgotEmail" type="email" required></label><button class="primary">إرسال رابط الاستعادة</button><button class="text-button" type="button" id="backLogin">العودة للدخول</button></form>
+<form id="resetForm" class="auth-form hidden"><label>كلمة المرور الجديدة<input id="newPassword" type="password" minlength="8" required></label><label>تأكيد كلمة المرور<input id="confirmPassword" type="password" minlength="8" required></label><button class="primary">حفظ كلمة المرور</button></form>
+<div class="auth-switch" id="authSwitch">ليس لديك حساب؟ <button id="showSignup" type="button">إنشاء حساب</button></div><p id="authMessage" class="message"></p><p class="demo-note" id="setupNote">الوضع المحلي التجريبي: بياناتك محفوظة على هذا المتصفح فقط. اربط Supabase لتفعيل المستخدمين بين الأجهزة.</p>
+</section></main>
+<main id="appView" class="app hidden">
+<aside class="sidebar"><div class="side-brand"><div class="small-mark">م</div><div><b>مجلس</b><small>Majlis</small></div></div>
+<div class="side-actions"><button id="createRoom">＋ إنشاء مجلس</button><button id="findUsers">⌕ البحث عن مستخدم</button></div><div class="side-heading">المحادثات والرسائل</div><div id="roomList" class="room-list"></div>
+<div class="profile"><div class="avatar" id="userAvatar">م</div><div class="profile-info"><b id="userName">مستخدم</b><small id="userEmail"></small></div><button id="logout" class="icon-button" title="تسجيل الخروج">↪</button></div></aside>
+<section class="chat-panel"><header class="chat-header"><button id="backToChats" class="back-chats" type="button" aria-label="العودة للمحادثات">‹</button><div class="chat-heading"><h2 id="roomTitle">أهلاً بك في مجلس</h2><p id="roomSubtitle">اختر مجلساً وابدأ الحديث</p></div><div class="header-actions"><span id="adminLabel" class="admin-label"></span><button id="enableNotifications" type="button">🔔 التنبيهات</button><button id="manageMembers" class="hidden">الأعضاء</button></div></header>
+<div id="welcome" class="welcome"><div class="welcome-icon">✦</div><h2>أهلاً بك في مجلس</h2><p>ابحث عن مستخدمين أو أنشئ مجلساً جديداً لبدء المحادثة.</p></div><div id="messages" class="messages hidden"></div>
+<form id="messageForm" class="composer hidden"><input id="imagePicker" type="file" accept="image/*" class="hidden"><button type="button" id="sendImage" class="media-button" title="إرسال صورة">📷</button><button type="button" id="shareLocation" class="media-button" title="مشاركة الموقع المباشر">📍</button><button type="button" id="recordVoice" class="voice-button" title="تسجيل رسالة صوتية">🎙️</button><span id="recordStatus" class="record-status hidden">● جارٍ التسجيل…</span><input id="messageInput" maxlength="2000" autocomplete="off" placeholder="اكتب رسالتك هنا..."><button class="send-button">➤</button></form></section></main>
+<div id="modal" class="modal hidden"><form id="roomForm" class="modal-card"><button type="button" id="closeModal" class="close">×</button><h2>إنشاء مجلس جديد</h2><p class="muted">أنت ستكون مشرف هذا المجلس.</p><label>اسم المجلس<input id="roomName" required maxlength="50" placeholder="مثلاً: الأصدقاء"></label><button class="primary">إنشاء المجلس</button></form></div>
+<div id="usersModal" class="modal hidden"><section class="modal-card"><button type="button" class="close" data-close="usersModal">×</button><h2>البحث عن المستخدمين</h2><p class="hint">ابحث بالاسم أو البريد الإلكتروني بين الحسابات المسجلة على هذا الجهاز في الوضع التجريبي.</p><input id="userSearch" class="search-input" placeholder="اكتب اسم المستخدم أو بريده..."><div id="userResults" class="list-stack"></div></section></div>
+<div id="membersModal" class="modal hidden"><section class="modal-card"><button type="button" class="close" data-close="membersModal">×</button><h2>أعضاء المجلس</h2><p class="hint">مشرف المجلس يستطيع إزالة الأعضاء. في الوضع التجريبي، الأعضاء محليون على هذا الجهاز.</p><div id="membersList" class="list-stack"></div></section></div>
+<div id="toastWrap" class="toast-wrap" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* لإتاحة المستخدمين بين الأجهزة: ضع بيانات مشروع Supabase هنا بعد إنشاء الجداول. */
+const SUPABASE_URL = "";
+const SUPABASE_ANON_KEY = "";
+const hasSupabase = !!(SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase);
+const db = hasSupabase ? window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY) : null;
+const $=id=>document.getElementById(id);
+let currentUser=null,currentRoom=null,channel=null;
+let knownMessageIds=new Set(), notificationPermissionAsked=false;
+let voiceRecorder=null,voiceStream=null,voiceChunks=[];
+let liveLocationWatch=null,liveLocationTimer=null,lastLivePosition=null;
+let demoUsers=JSON.parse(localStorage.getItem("majlis_users")||"[]");
+let demoRooms=JSON.parse(localStorage.getItem("majlis_rooms")||"[]");
+let demoMessages=JSON.parse(localStorage.getItem("majlis_messages")||"{}");
+let demoMembers=JSON.parse(localStorage.getItem("majlis_members")||"{}");
+const forms=["loginForm","signupForm","forgotForm","resetForm"];
+function showForm(id){forms.forEach(x=>$(x).classList.toggle("hidden",x!==id));$("authSwitch").classList.toggle("hidden",id==="forgotForm"||id==="resetForm");$("authMessage").textContent="";}
+function say(t,ok=false){$("authMessage").textContent=t;$("authMessage").style.color=ok?"#65d9ad":"#ffbd75";}
+function saveDemo(){localStorage.setItem("majlis_users",JSON.stringify(demoUsers));localStorage.setItem("majlis_rooms",JSON.stringify(demoRooms));localStorage.setItem("majlis_messages",JSON.stringify(demoMessages));localStorage.setItem("majlis_members",JSON.stringify(demoMembers));}
+function nameOf(u){return u.user_metadata?.display_name||u.name||u.email?.split("@")[0]||"مستخدم";}
+function showApp(user){currentUser=user;$("authView").classList.add("hidden");$("appView").classList.remove("hidden");$("userName").textContent=nameOf(user);$("userEmail").textContent=user.email||"";$("userAvatar").textContent=nameOf(user)[0];loadRooms();}
+function showAuth(){ $("appView").classList.add("hidden");$("authView").classList.remove("hidden");}
+$("showSignup").onclick=()=>showForm("signupForm");$("showForgot").onclick=()=>showForm("forgotForm");$("backLogin").onclick=()=>showForm("loginForm");
+$("loginForm").onsubmit=async e=>{e.preventDefault();let email=$("loginEmail").value.trim().toLowerCase(),password=$("loginPassword").value;if(db){let {data,error}=await db.auth.signInWithPassword({email,password});if(error)return say(error.message);showApp(data.user);}else{let u=demoUsers.find(x=>x.email===email&&x.password===password);if(!u)return say("الحساب غير موجود أو كلمة المرور غير صحيحة. أنشئ حساباً أولاً.");showApp({id:u.id,email:u.email,user_metadata:{display_name:u.name}});}};
+$("signupForm").onsubmit=async e=>{e.preventDefault();let name=$("signupName").value.trim(),email=$("signupEmail").value.trim().toLowerCase(),password=$("signupPassword").value;if(db){let {data,error}=await db.auth.signUp({email,password,options:{data:{display_name:name}}});if(error)return say(error.message);say("تم إنشاء الحساب. افحص بريدك لتأكيد الحساب.",true);}else{if(demoUsers.some(x=>x.email===email))return say("هذا البريد مسجل مسبقاً.");let u={id:crypto.randomUUID(),name,email,password};demoUsers.push(u);saveDemo();say("تم إنشاء الحساب التجريبي. يمكنك تسجيل الدخول الآن.",true);showForm("loginForm");$("loginEmail").value=email;}};
+$("forgotForm").onsubmit=async e=>{e.preventDefault();if(!db)return say("إرسال البريد يحتاج إعداد Supabase. اربط قاعدة البيانات أولاً.");let {error}=await db.auth.resetPasswordForEmail($("forgotEmail").value.trim(),{redirectTo:location.origin+location.pathname+"?reset=1"});if(error)return say(error.message);say("إذا كان البريد مسجلاً، سيصلك رابط الاستعادة.",true);};
+$("resetForm").onsubmit=async e=>{e.preventDefault();let p=$("newPassword").value;if(p!==$("confirmPassword").value)return say("كلمتا المرور غير متطابقتين.");if(!db)return say("إعادة التعيين تحتاج إعداد Supabase.");let {error}=await db.auth.updateUser({password:p});if(error)return say(error.message);say("تم تغيير كلمة المرور بنجاح.",true);};
+$("logout").onclick=async()=>{if(liveLocationWatch!==null)navigator.geolocation.clearWatch(liveLocationWatch);clearInterval(liveLocationTimer);liveLocationWatch=null;liveLocationTimer=null;if(db)await db.auth.signOut();currentUser=null;currentRoom=null;showAuth();showForm("loginForm");};
+async function loadRooms(){
+ let rooms;
+ if(db){let {data,error}=await db.from("rooms").select("*").order("created_at");if(error)return console.error(error);rooms=data||[];}else rooms=demoRooms;
+ let list=$("roomList");list.innerHTML="";
+ // اعرض المحادثات الخاصة أولاً، ثم المجالس، مع آخر رسالة لكل محادثة.
+ rooms=rooms.filter(r=>!demoMembers[r.id]||demoMembers[r.id].includes(currentUser.id)||r.created_by===currentUser.id);
+ const lastFor=r=>{const rows=(demoMessages[r.id]||[]);return rows.length?rows[rows.length-1]:null;};
+ rooms.sort((a,b)=>{const ta=Date.parse(lastFor(a)?.created_at||a.created_at||0)||0;const tb=Date.parse(lastFor(b)?.created_at||b.created_at||0)||0;return tb-ta;});
+ if(!rooms.length){let empty=document.createElement("div");empty.className="empty-result";empty.textContent="لا توجد محادثات بعد. ابحث عن مستخدم لبدء محادثة جديدة.";list.append(empty);return;}
+ rooms.forEach(r=>{
+  const b=document.createElement("button");b.className="room-item"+(currentRoom?.id===r.id?" active":"");
+  const symbol=document.createElement("span");symbol.className="room-symbol";symbol.textContent=r.is_dm?"●":"#";
+  const info=document.createElement("span");info.className="room-name room-info";
+  const title=document.createElement("b");title.className="room-title";
+  title.textContent=r.is_dm?(r.name.replace(/^محادثة مع\s*/,"")):r.name;
+  const preview=document.createElement("small");preview.className="room-preview";
+  const last=lastFor(r);preview.textContent=last?(last.user_id===currentUser.id?"أنت: ":"")+(String(last.content||"").startsWith("VOICE:")?"🎤 رسالة صوتية":String(last.content||"").startsWith("IMAGE:")?"📷 صورة":String(last.content||"").startsWith("LOCATION:")?"📍 موقع مباشر":last.content):"ابدأ المحادثة الآن";
+  info.append(title,preview);b.append(symbol,info);b.onclick=()=>openRoom(r);list.appendChild(b);
+ });
+}
+$("createRoom").onclick=()=>{$("modal").classList.remove("hidden");$("roomName").focus();};$("closeModal").onclick=()=>$("modal").classList.add("hidden");
+$("roomForm").onsubmit=async e=>{e.preventDefault();let name=$("roomName").value.trim();if(!name)return;if(db){let {data,error}=await db.from("rooms").insert({name,created_by:currentUser.id}).select().single();if(error)return alert(error.message);currentRoom=data;}else{currentRoom={id:crypto.randomUUID(),name,created_by:currentUser.id};demoRooms.push(currentRoom);demoMembers[currentRoom.id]=[currentUser.id];saveDemo();}$("roomName").value="";$("modal").classList.add("hidden");await loadRooms();openRoom(currentRoom);};
+function isAdmin(){return currentRoom&&(currentRoom.created_by===currentUser.id||currentRoom.admin_id===currentUser.id);}
+async function openRoom(room){$("appView").classList.add("chat-open");currentRoom=room;$("roomTitle").textContent=room.name;$("roomSubtitle").textContent="مجلس للمحادثة والمشاركة";$("adminLabel").textContent=isAdmin()?"مشرف المجلس":"";$("manageMembers").classList.remove("hidden");$("manageMembers").onclick=showMembers;
+$("backToChats").onclick=()=>{$("appView").classList.remove("chat-open");loadRooms();};$("welcome").classList.add("hidden");$("messages").classList.remove("hidden");$("messageForm").classList.remove("hidden");await loadMessages();if(db){if(channel)await db.removeChannel(channel);channel=db.channel("room-"+room.id).on("postgres_changes",{event:"INSERT",schema:"public",table:"messages",filter:"room_id=eq."+room.id},p=>appendMessage(p.new,true)).on("postgres_changes",{event:"DELETE",schema:"public",table:"messages",filter:"room_id=eq."+room.id},p=>{let el=document.querySelector('[data-id="'+p.old.id+'"]');if(el)el.remove();}).subscribe();}loadRooms();}
+async function loadMessages(){let box=$("messages");box.innerHTML="";let rows=[];if(db){let {data,error}=await db.from("messages").select("*").eq("room_id",currentRoom.id).order("created_at");if(error)return console.error(error);rows=data||[];}else rows=demoMessages[currentRoom.id]||[];rows.forEach(appendMessage);}
+function appendMessage(m, notify=false){
+ if(!currentRoom||m.room_id!==currentRoom.id||document.querySelector('[data-id="'+m.id+'"]'))return;
+ let row=document.createElement("div");
+ row.className="message-row"+(m.user_id===currentUser.id?" mine":"");
+ row.dataset.id=m.id;
+ let meta=document.createElement("div");meta.className="message-meta";
+ let who=document.createElement("button");who.type="button";who.className="sender-link";
+ who.textContent=m.display_name||m.email||"عضو";
+ who.title="اضغط لبدء محادثة مع هذا المرسل";
+ who.onclick=()=>openSenderConversation(m);
+ let time=document.createElement("span");
+ time.textContent=" · "+new Date(m.created_at||Date.now()).toLocaleTimeString("ar",{hour:"2-digit",minute:"2-digit"});
+ meta.append(who,time);
+ if(isAdmin() || m.user_id===currentUser.id){let del=document.createElement("button");del.className="delete-msg";del.textContent="حذف الرسالة";del.title=isAdmin()&&m.user_id!==currentUser.id?"حذف رسالة عضو":"حذف رسالتك";del.onclick=()=>deleteMessage(m);meta.append(del);}
+ let body=document.createElement("div");body.className="message-text";
+ if(typeof m.content==="string" && m.content.startsWith("IMAGE:")){
+   const img=document.createElement("img");img.className="shared-image";img.alt="صورة مرسلة";img.loading="lazy";img.src=m.content.slice(6);img.onclick=()=>window.open(img.src,"_blank");body.append(img);
+ }else if(typeof m.content==="string" && m.content.startsWith("LOCATION:")){
+   const parts=m.content.slice(9).split(","),lat=Number(parts[0]),lng=Number(parts[1]);
+   if(Number.isFinite(lat)&&Number.isFinite(lng)){
+     const a=document.createElement("a");a.className="location-card";a.href=`https://www.google.com/maps?q=${lat},${lng}`;a.target="_blank";a.rel="noopener";
+     const pin=document.createElement("span");pin.textContent="📍";pin.style.fontSize="25px";
+     const info=document.createElement("span"),strong=document.createElement("strong"),small=document.createElement("small");strong.textContent=parts[2]==="live"?"موقع مباشر":"الموقع الحالي";small.textContent="اضغط لفتح الموقع على الخريطة";info.append(strong,small);a.append(pin,info);body.append(a);
+   }else body.textContent="موقع غير صالح";
+ }else if(typeof m.content==="string" && m.content.startsWith("VOICE:")){
+   const audio=document.createElement("audio");audio.controls=true;audio.className="voice-player";
+   audio.src=m.content.slice(6);audio.preload="metadata";body.append(audio);
+ }else body.textContent=m.content;
+ row.append(meta,body);$("messages").appendChild(row);$("messages").scrollTop=$("messages").scrollHeight;
+ if(notify && m.user_id!==currentUser.id) notifyNewMessage(m);
+}
+function openSenderConversation(m){
+ if(!m.user_id || m.user_id===currentUser.id)return;
+ if(!db){
+   const sender=demoUsers.find(u=>u.id===m.user_id);
+   if(sender){startDirect(sender);return;}
+   showToast("المرسل", "لا تتوفر بيانات حساب المرسل في الوضع المحلي.");
+   return;
+ }
+ // In the connected version, find the sender's profile through a public profiles table
+ // and start a private conversation after that table is configured.
+ showToast(m.display_name||"المرسل", "اضغط على زر البحث عن مستخدم لفتح محادثة خاصة مع هذا الحساب.");
+}
+function showToast(title, body){
+ const wrap=$("toastWrap"), item=document.createElement("div"), b=document.createElement("b"), p=document.createElement("p");
+ item.className="toast";b.textContent=title;p.textContent=body;item.append(b,p);wrap.append(item);
+ setTimeout(()=>item.remove(),5500);
+}
+function notifyNewMessage(m){
+ const sender=m.display_name||m.email||"مستخدم";
+ showToast("رسالة جديدة من "+sender,m.content);
+ if("Notification" in window && Notification.permission==="granted" && document.hidden){
+   try{new Notification("رسالة جديدة من "+sender,{body:m.content,tag:"majlis-"+m.id});}catch(e){}
+ }
+}
+async function enableNotifications(){
+ if(!("Notification" in window)){showToast("التنبيهات","المتصفح لا يدعم إشعارات النظام.");return;}
+ const permission=await Notification.requestPermission();
+ showToast("تنبيهات مجلس",permission==="granted"?"تم تفعيل إشعارات الرسائل الجديدة.":"لم يتم السماح بالإشعارات.");
+}
+$("enableNotifications").onclick=enableNotifications;
+async function deleteMessage(m){
+ const canDelete=isAdmin() || m.user_id===currentUser.id;
+ if(!canDelete)return alert("يمكنك حذف رسائلك فقط، والمشرف يمكنه حذف رسائل الجميع.");
+ const promptText=m.user_id===currentUser.id?"حذف رسالتك للجميع؟":"حذف رسالة هذا العضو للجميع؟";
+ if(!confirm(promptText))return;
+ if(db){
+   let query=db.from("messages").delete().eq("id",m.id);
+   if(!isAdmin())query=query.eq("user_id",currentUser.id);
+   const {error}=await query;
+   if(error)return alert("تعذر حذف الرسالة: "+error.message+"\nتحقق من سياسة الحذف في Supabase.");
+ }else{
+   demoMessages[currentRoom.id]=(demoMessages[currentRoom.id]||[]).filter(x=>x.id!==m.id);
+   saveDemo();
+ }
+ let el=document.querySelector('[data-id="'+m.id+'"]');if(el)el.remove();
+}
+async function sendMajlisContent(content){if(!content||!currentRoom)return;if(db){let {error}=await db.from("messages").insert({room_id:currentRoom.id,user_id:currentUser.id,display_name:nameOf(currentUser),content});if(error)throw error;}else{let m={id:crypto.randomUUID(),room_id:currentRoom.id,user_id:currentUser.id,display_name:nameOf(currentUser),content,created_at:new Date().toISOString()};demoMessages[currentRoom.id]??=[];demoMessages[currentRoom.id].push(m);saveDemo();appendMessage(m);}}
+$("messageForm").onsubmit=async e=>{e.preventDefault();let content=$("messageInput").value.trim();if(!content||!currentRoom)return;$("messageInput").value="";try{await sendMajlisContent(content);}catch(error){alert("تعذر إرسال الرسالة: "+error.message);$("messageInput").value=content;}};
+$("recordVoice").onclick=async()=>{
+ const btn=$("recordVoice"),status=$("recordStatus");
+ if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){alert("تسجيل الصوت غير مدعوم في هذا المتصفح. افتح التطبيق عبر HTTPS واسمح باستخدام الميكروفون.");return;}
+ if(voiceRecorder&&voiceRecorder.state==="recording"){voiceRecorder.stop();return;}
+ try{
+   voiceStream=await navigator.mediaDevices.getUserMedia({audio:true});voiceChunks=[];
+   const mime=MediaRecorder.isTypeSupported("audio/webm;codecs=opus")?"audio/webm;codecs=opus":(MediaRecorder.isTypeSupported("audio/mp4")?"audio/mp4":"");
+   voiceRecorder=new MediaRecorder(voiceStream,mime?{mimeType:mime}:undefined);
+   voiceRecorder.ondataavailable=e=>{if(e.data&&e.data.size)voiceChunks.push(e.data);};
+   voiceRecorder.onstop=async()=>{
+     btn.classList.remove("recording");btn.textContent="🎙️";status.classList.add("hidden");
+     voiceStream?.getTracks().forEach(t=>t.stop());voiceStream=null;
+     const blob=new Blob(voiceChunks,{type:voiceRecorder.mimeType||"audio/webm"});
+     if(!blob.size)return;
+     if(blob.size>2*1024*1024){alert("المقطع أكبر من 2 ميغابايت. سجّل مقطعاً أقصر.");return;}
+     const reader=new FileReader();reader.onload=async()=>{try{await sendMajlisContent("VOICE:"+reader.result);}catch(err){alert("تعذر إرسال التسجيل: "+err.message);}};reader.readAsDataURL(blob);
+   };
+   voiceRecorder.start();btn.classList.add("recording");btn.textContent="■";status.classList.remove("hidden");
+ }catch(err){alert("لم نتمكن من تشغيل الميكروفون. اسمح للموقع باستخدامه ثم حاول مجدداً. "+err.message);voiceStream?.getTracks().forEach(t=>t.stop());voiceStream=null;}
+};
+$("sendImage").onclick=()=>{if(!currentRoom)return;$("imagePicker").click();};
+$("imagePicker").onchange=async e=>{
+ const file=e.target.files?.[0];e.target.value="";if(!file)return;
+ if(!file.type.startsWith("image/")){alert("اختر ملف صورة صالحاً.");return;}
+ try{
+  const data=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file);});
+  const img=await new Promise((resolve,reject)=>{const el=new Image();el.onload=()=>resolve(el);el.onerror=reject;el.src=data;});
+  const scale=Math.min(1,1600/Math.max(img.width,img.height)),canvas=document.createElement("canvas");canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);
+  canvas.getContext("2d").drawImage(img,0,0,canvas.width,canvas.height);
+  let compressed=canvas.toDataURL("image/jpeg",.78);if(compressed.length>2_500_000)compressed=canvas.toDataURL("image/jpeg",.58);
+  if(compressed.length>2_500_000){alert("الصورة كبيرة جداً. اختر صورة أصغر.");return;}
+  await sendMajlisContent("IMAGE:"+compressed);
+ }catch(err){alert("تعذر إرسال الصورة: "+err.message);}
+};
+async function sendCurrentLocation(isLive=false){
+ if(!currentRoom)return;
+ if(!navigator.geolocation){alert("المتصفح لا يدعم تحديد الموقع.");return;}
+ navigator.geolocation.getCurrentPosition(async pos=>{
+  const {latitude,longitude}=pos.coords;lastLivePosition={latitude,longitude};
+  try{await sendMajlisContent(`LOCATION:${latitude},${longitude}${isLive?",live":""}`);}catch(err){alert("تعذر إرسال الموقع: "+err.message);}
+ },err=>alert("تعذر تحديد موقعك. فعّل GPS واسمح للموقع بالوصول إلى الموقع. "+err.message),{enableHighAccuracy:true,timeout:15000,maximumAge:0});
+}
+$("shareLocation").onclick=()=>{
+ if(liveLocationWatch!==null){navigator.geolocation.clearWatch(liveLocationWatch);liveLocationWatch=null;clearInterval(liveLocationTimer);liveLocationTimer=null;$("shareLocation").textContent="📍";$("shareLocation").title="مشاركة الموقع المباشر";showToast("الموقع المباشر","تم إيقاف مشاركة موقعك.");return;}
+ if(!currentRoom)return;
+ if(!navigator.geolocation){alert("المتصفح لا يدعم تحديد الموقع.");return;}
+ if(!confirm("سيتم مشاركة موقعك الحالي وتحديثه في المحادثة كل 15 ثانية حتى توقف المشاركة. هل تريد المتابعة؟"))return;
+ $("shareLocation").textContent="⏹";$("shareLocation").title="إيقاف مشاركة الموقع";
+ navigator.geolocation.getCurrentPosition(async pos=>{
+  lastLivePosition=pos;try{await sendMajlisContent(`LOCATION:${pos.coords.latitude},${pos.coords.longitude},live`);}catch(err){alert(err.message);}
+  liveLocationWatch=navigator.geolocation.watchPosition(p=>{lastLivePosition=p;},err=>showToast("الموقع المباشر",err.message),{enableHighAccuracy:true,maximumAge:5000,timeout:20000});
+  liveLocationTimer=setInterval(async()=>{if(lastLivePosition){try{await sendMajlisContent(`LOCATION:${lastLivePosition.coords.latitude},${lastLivePosition.coords.longitude},live`);}catch(err){console.error(err);}}},15000);
+ },err=>{$("shareLocation").textContent="📍";alert("تعذر تحديد موقعك. فعّل GPS واسمح بالوصول للموقع. "+err.message);},{enableHighAccuracy:true,timeout:15000,maximumAge:0});
+};
+$("findUsers").onclick=()=>{$("usersModal").classList.remove("hidden");$("userSearch").value="";renderUserSearch();$("userSearch").focus();};$("userSearch").oninput=renderUserSearch;
+function renderUserSearch(){let q=$("userSearch").value.trim().toLowerCase(),box=$("userResults");box.innerHTML="";let users=demoUsers.filter(u=>u.id!==currentUser.id&&(!q||u.name.toLowerCase().includes(q)||u.email.includes(q)));if(!users.length){box.innerHTML='<div class="empty-result">لا توجد حسابات مطابقة على هذا الجهاز حالياً.</div>';return;}users.forEach(u=>{let row=document.createElement("div");row.className="search-result";row.innerHTML='<div class="avatar"></div><div class="person-info"><b></b><small></small></div><button class="small-btn">مراسلة</button>';row.querySelector(".avatar").textContent=u.name[0];row.querySelector("b").textContent=u.name;row.querySelector("small").textContent=u.email;row.querySelector("button").onclick=()=>startDirect(u);box.append(row);});}
+function startDirect(u){let id=[currentUser.id,u.id].sort().join("_");let room=demoRooms.find(r=>r.id==="dm_"+id);if(!room){room={id:"dm_"+id,name:"محادثة مع "+u.name,created_by:currentUser.id,is_dm:true};demoRooms.push(room);demoMembers[room.id]=[currentUser.id,u.id];saveDemo();} $("usersModal").classList.add("hidden");loadRooms();openRoom(room);}
+$("manageMembers").onclick=showMembers;
+$("backToChats").onclick=()=>{$("appView").classList.remove("chat-open");loadRooms();};
+function showMembers(){if(!currentRoom)return;let box=$("membersList");box.innerHTML="";let ids=demoMembers[currentRoom.id]||[currentRoom.created_by];if(!ids.includes(currentRoom.created_by))ids.unshift(currentRoom.created_by);let members=demoUsers.filter(u=>ids.includes(u.id));if(!members.length&&currentUser)members=[{id:currentUser.id,name:nameOf(currentUser),email:currentUser.email}];members.forEach(u=>{let row=document.createElement("div");row.className="member-row";row.innerHTML='<div class="avatar"></div><div class="person-info"><b></b><small></small></div>';row.querySelector(".avatar").textContent=u.name[0];row.querySelector("b").textContent=u.name+(u.id===currentRoom.created_by?" · المشرف":"");row.querySelector("small").textContent=u.email||"";if(isAdmin()&&u.id!==currentUser.id&&u.id!==currentRoom.created_by){let kick=document.createElement("button");kick.className="danger-btn";kick.textContent="طرد من المجلس";kick.onclick=()=>kickMember(u);row.append(kick);}box.append(row);});if(!isAdmin()){let note=document.createElement("p");note.className="hint";note.textContent="أنت عضو في هذا المجلس. إدارة الأعضاء متاحة للمشرف فقط.";box.append(note);} $("membersModal").classList.remove("hidden");}
+function kickMember(u){if(!isAdmin())return alert("هذه الصلاحية للمشرف فقط.");if(!confirm("طرد "+u.name+" من المجلس؟"))return;demoMembers[currentRoom.id]=(demoMembers[currentRoom.id]||[]).filter(id=>id!==u.id);saveDemo();showMembers();loadRooms();}
+document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>$(b.dataset.close).classList.add("hidden"));
+async function init(){if(db){$("setupNote").textContent="الحسابات وقاعدة البيانات مفعّلة عبر Supabase.";let {data}=await db.auth.getSession();if(data.session)showApp(data.session.user);db.auth.onAuthStateChange((event,session)=>{if(event==="PASSWORD_RECOVERY"){showAuth();showForm("resetForm");}else if(session&&!currentUser)showApp(session.user);});}else{ $("setupNote").textContent="وضع تجريبي محلي: البحث وإدارة الأعضاء يعملان بين الحسابات المنشأة على هذا المتصفح فقط. للمزامنة بين الأجهزة يلزم إعداد قاعدة بيانات.";}if(new URLSearchParams(location.search).has("reset"))showForm("resetForm");}
+
+window.addEventListener("storage", e=>{
+ if(e.key==="majlis_messages" && currentRoom && e.newValue){
+   try{
+     const all=JSON.parse(e.newValue), rows=all[currentRoom.id]||[];
+     rows.forEach(m=>appendMessage(m,true));
+   }catch(err){}
+ }
+});
+init();
+</script></body></html>

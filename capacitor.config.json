@@ -1,0 +1,6 @@
+{
+  "appId": "com.majlis.chat",
+  "appName": "Majlis",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
